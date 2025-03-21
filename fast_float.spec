@@ -7,7 +7,7 @@
 #
 Name     : fast_float
 Version  : 8.0.2
-Release  : 1
+Release  : 2
 URL      : https://github.com/fastfloat/fast_float/archive/refs/tags/v8.0.2.tar.gz
 Source0  : https://github.com/fastfloat/fast_float/archive/refs/tags/v8.0.2.tar.gz
 Summary  : No detailed summary available
@@ -38,6 +38,7 @@ Group: Development
 Requires: fast_float-data = %{version}-%{release}
 Provides: fast_float-devel = %{version}-%{release}
 Requires: fast_float = %{version}-%{release}
+Provides: pkgconfig(fast_float)
 
 %description dev
 dev components for the fast_float package.
@@ -60,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1742589434
+export SOURCE_DATE_EPOCH=1742592617
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -97,7 +98,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1742589434
+export SOURCE_DATE_EPOCH=1742592617
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fast_float
 cp %{_builddir}/fast_float-%{version}/LICENSE-APACHE %{buildroot}/usr/share/package-licenses/fast_float/17d9f7912c62b7feadce3c1054e64ab70ade5111 || :
